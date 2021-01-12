@@ -306,7 +306,7 @@ func (apiv1 *APIv1) release_one(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 
-	log.Printf("Releasing to %s (via %s:%s)", cfg.Email, cfg.Host, cfg.Port)
+	log.Printf("Releasing email to %s (via %s:%s)", cfg.Email, cfg.Host, cfg.Port)
 
 	bytes := make([]byte, 0)
 	for h, l := range msg.Content.Headers {
